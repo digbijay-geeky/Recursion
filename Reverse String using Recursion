@@ -1,0 +1,33 @@
+String Reverse using two pointers.
+=================================================================
+/*package whatever //do not write package name here */
+
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		
+		String s="kanhu";
+		char[] str = "kanhu".toCharArray();
+		int start=0;
+		int end=s.length()-1;
+	
+		reverse(str,start,end);
+		
+	}
+	public static void swap(char []arr, int i, int j)
+{
+    char temp= arr[i];
+    arr[i]=arr[j];
+    arr[j]=temp;
+}
+	public static void reverse(char []str,int start,int end){
+	    
+	    if(start>end){
+	        System.out.println(str);
+	        return;
+	    }
+	   swap(str,start,end);
+	   reverse(str,start+1,end-1);
+	}
+}

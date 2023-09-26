@@ -1,0 +1,19 @@
+public class Solution {
+    public static Boolean isPalindrome(String s) {
+        // Write your code here..
+        return  isCheck(s,0,s.length()-1);
+    }
+    public static Boolean isCheck(String s,int i,int j){
+        if(i>j){
+            return true;
+        }
+
+        if(s.charAt(i)!=s.charAt(j)){
+            return false;
+        }
+        else{
+            return isCheck(s, i+1, j-1);
+        }
+    }
+
+}

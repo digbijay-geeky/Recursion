@@ -1,0 +1,24 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+	
+		String s="baccad";
+		int index=0;
+		skip(s,0);
+	
+	}
+	static String value=" ";
+	public static void skip(String s,int index){
+	    if(index==s.length()){
+	       	System.out.println(value);
+	       return;
+	    }
+	    if(s.charAt(index)!='a'){
+	        value=value+s.charAt(index);
+	    }
+	     skip(s,index+1) ;
+	}
+}
